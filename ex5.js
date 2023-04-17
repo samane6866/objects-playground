@@ -2,6 +2,15 @@
  * Buscando a Nemo
  */
 
+/**
+ * Disponemos de un array de 3 objetos. Concretamente, son 3 peces.
+ * Queremos implementar una función que nos diga si cierto pez está en el array.
+ *
+ * 1. ¿Cómo debemos actualizar la variable pezEncontrado a cada iteración del bucle?
+ * 2. ¿Cómo debemos actualizar la variale 'indicePez' a cada iteración del bucle?
+ *
+ * Ayudate de chivatos y del depurador de visual Studio para ver que sucede dentro del bucle a cada iteración
+ */
 let pez1 = {
   nombre: "Dory",
   color: "azul",
@@ -16,17 +25,6 @@ let pez3 = {
   nombre: "Sipho",
   color: "negro",
 };
-
-/**
- * Disponemos de un array de 3 objetos. Concretamente, son 3 peces.
- * Queremos implementar una función que nos diga si cierto pez está en el array.
- *
- * 1. ¿Cómo debemos actualizar la variable pezEncontrado a cada iteración del bucle?
- * 2. ¿Cómo debemos actualizar la variale 'indicePez' a cada iteración del bucle?
- *
- * Ayudate de chivatos y del depurador de visual Studio para ver que sucede dentro del bucle a cada iteración
- */
-
 let banco_peces = [pez1, pez2, pez3];
 
 function buscarPez(banco_peces, pezBuscado) {
@@ -34,8 +32,10 @@ function buscarPez(banco_peces, pezBuscado) {
   let indicePez = 0;
 
   while (!pezEncontrado && indicePez <= banco_peces.length) {
-    if (banco_peces[indicePez] === pezBuscado) {
+    if (banco_peces[indicePez]?.nombre === pezBuscado) {
       pezEncontrado = true;
+    } else {
+      pezEncontrado = false;
     }
     indicePez++;
   }
