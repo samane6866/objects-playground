@@ -3,15 +3,15 @@
  */
 
 let persona = {
-    nombre: 'Adolf',
-    apellidos: 'Huxley'
-}
-
+  nombre: "Adolf",
+  apellidos: "Huxley",
+};
+persona.apellidos = "Rudolph";
 /**
  * Escribe una instrucción para cambiar la propiedad 'apellidos' de la persona. Queremos cambiar sus apellidos a 'Rudolph'
  */
 
- //Aquí tu instrucción JavaScript
+//Aquí tu instrucción JavaScript
 
- // No modificar a partir de aqui
- console.log(persona.apellidos)
+// No modificar a partir de aqui
+console.log(persona.apellidos);
